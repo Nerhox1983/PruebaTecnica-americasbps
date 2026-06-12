@@ -1,0 +1,62 @@
+# ==========================================
+# 🏢 .NET (Backend)
+# ==========================================
+# Carpetas de compilación y salida
+[Bb]in/
+[Oo]bj/
+artifacts/
+
+# Archivos de usuario y configuraciones locales de IDEs
+.vs/
+.idea/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Configuración local de desarrollo (evita subir credenciales)
+appsettings.Development.json
+appsettings.Local.json
+
+# Herramientas de .NET y archivos temporales
+.dotnet/
+project.lock.json
+.敲/
+
+# ==========================================
+# Python (Robot RPA / Scripts)
+# ==========================================
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+
+# Archivos compilados y caché de Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# ==========================================
+# Base de Datos Local (SQLite)
+# ==========================================
+# Ignora el archivo de datos para que el evaluador empiece con una BD limpia
+*.db
+*.sqlite3
+*.db-journal
+*.db-wal
+
+# ==========================================
+# Archivos Temporales de Carga (Backend)
+# ==========================================
+# Ignora los archivos Excel/CSV que subas durante tus pruebas locales
+backend/uploads/*
+# Forzar a Git a mantener la carpeta vacía en el repositorio
+!backend/uploads/.gitkeep
+
+# ==========================================
+# Sistema Operativo
+# ==========================================
+.DS_Store
+Thumbs.db
