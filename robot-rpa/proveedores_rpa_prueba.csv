@@ -1,5 +1,10 @@
-nit_empresa,nombre_empresa,pais,tipo_carga,estado_registro
+nitEmpresa,nombreEmpresa,pais,tipoCarga,estadoRegistro
 900555111-1,Insumos Industriales del Norte S.A.S.,Colombia,AUTOMATICO,ACTIVO
 800444222-2,Distribuidora de Empaques Global,Chile,AUTOMATICO,ACTIVO
 700333111-3,Logística y Transportes del Pacífico,Perú,AUTOMATICO,INACTIVO
 700254946-7,Carnes y embutidos picantes Gauchito,Argentina,AUTOMATICO,ACTIVO
+901222333-4,Lácteos del Campo Organics,Colombia,AUTOMATICO,ACTIVO
+820111555-8,Plásticos y Envases Santiago,Chile,AUTOMATICO,ACTIVO
+600888999-9,Fruver Importaciones Lima,Perú,AUTOMATICO,ACTIVO
+900111222-0,Tecnologías de Automatización S.A.,Colombia,AUTOMATICO,INACTIVO
+800258627-8,Quesos de Occidente, Venezuela,MANUAL,INACTIVO

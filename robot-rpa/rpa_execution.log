@@ -158,3 +158,58 @@
 2026-06-13 09:04:02,134 [INFO]  Procesados con éxito:     3
 2026-06-13 09:04:02,134 [INFO]  Errores / Descartados:    1
 2026-06-13 09:04:02,135 [INFO] ==================================================
+2026-06-13 11:50:41,167 [INFO] Verificando conectividad con el backend de .NET...
+2026-06-13 11:50:45,303 [CRITICAL] No se pudo conectar a la API: HTTPSConnectionPool(host='localhost', port=53528): Max retries exceeded with url: /api/proveedores (Caused by NewConnectionError("HTTPSConnection(host='localhost', port=53528): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-06-13 11:52:05,046 [INFO] Verificando conectividad con el backend de .NET...
+2026-06-13 11:52:10,118 [CRITICAL] No se pudo conectar a la API: HTTPSConnectionPool(host='localhost', port=53528): Read timed out. (read timeout=5)
+2026-06-13 11:57:26,624 [INFO] Verificando conectividad con el backend de .NET...
+2026-06-13 11:57:27,675 [INFO] Conexión base establecida con éxito (Estatus 200).
+2026-06-13 11:57:27,675 [INFO] Procesando archivo: proveedores_rpa_prueba.csv
+2026-06-13 11:57:28,058 [ERROR] ❌ [Fila 1] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 11:57:28,338 [ERROR] ❌ [Fila 2] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 11:57:28,607 [ERROR] ❌ [Fila 3] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 11:57:28,889 [ERROR] ❌ [Fila 4] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 11:57:28,990 [INFO] ==================================================
+2026-06-13 11:57:28,990 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 11:57:28,990 [INFO] ==================================================
+2026-06-13 11:57:28,990 [INFO]  Total registros leídos:   4
+2026-06-13 11:57:28,991 [INFO]  Procesados con éxito:     0
+2026-06-13 11:57:28,991 [INFO]  Errores / Descartados:    4
+2026-06-13 11:57:28,991 [INFO] ==================================================
+2026-06-13 12:06:28,644 [INFO] Verificando conectividad con el backend de .NET...
+2026-06-13 12:06:30,442 [INFO] Conexión base establecida con éxito (Estatus 200).
+2026-06-13 12:06:30,443 [INFO] Procesando archivo: proveedores_rpa_prueba.csv
+2026-06-13 12:06:30,653 [ERROR] ❌ [Fila 1] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 12:06:30,929 [ERROR] ❌ [Fila 2] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 12:06:31,213 [ERROR] ❌ [Fila 3] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 12:06:31,501 [ERROR] ❌ [Fila 4] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 12:06:31,979 [INFO] ✔ [Fila 5] Insertado correctamente: Lácteos del Campo Organics
+2026-06-13 12:06:32,248 [INFO] ✔ [Fila 6] Insertado correctamente: Plásticos y Envases Santiago
+2026-06-13 12:06:32,522 [INFO] ✔ [Fila 7] Insertado correctamente: Fruver Importaciones Lima
+2026-06-13 12:06:32,793 [INFO] ✔ [Fila 8] Insertado correctamente: Tecnologías de Automatización S.A.
+2026-06-13 12:06:32,894 [INFO] ==================================================
+2026-06-13 12:06:32,894 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 12:06:32,894 [INFO] ==================================================
+2026-06-13 12:06:32,894 [INFO]  Total registros leídos:   8
+2026-06-13 12:06:32,895 [INFO]  Procesados con éxito:     4
+2026-06-13 12:06:32,895 [INFO]  Errores / Descartados:    4
+2026-06-13 12:06:32,910 [INFO] ==================================================
+2026-06-13 12:20:38,438 [INFO] Verificando conectividad con el backend...
+2026-06-13 12:20:40,224 [INFO] Conexión base establecida con éxito.
+2026-06-13 12:20:40,225 [INFO] Procesando archivo: proveedores_rpa_prueba.csv
+2026-06-13 12:20:40,439 [WARNING] [Fila 1] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 900555111-1)
+2026-06-13 12:20:40,760 [WARNING] [Fila 2] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 800444222-2)
+2026-06-13 12:20:41,064 [WARNING] [Fila 3] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 700333111-3)
+2026-06-13 12:20:41,345 [WARNING] [Fila 4] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 700254946-7)
+2026-06-13 12:20:41,612 [WARNING] [Fila 5] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 901222333-4)
+2026-06-13 12:20:41,906 [WARNING] [Fila 6] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 820111555-8)
+2026-06-13 12:20:42,188 [WARNING] [Fila 7] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 600888999-9)
+2026-06-13 12:20:42,482 [WARNING] [Fila 8] No se logró insertar porque ya existía dicho proveedor en PostgreSql (NIT: 900111222-0)
+2026-06-13 12:20:42,774 [INFO] ✔ [Fila 9] Insertado correctamente: Quesos de Occidente
+2026-06-13 12:20:42,874 [INFO] ==================================================
+2026-06-13 12:20:42,875 [INFO]               RESUMEN DE EJECUCIÓN                
+2026-06-13 12:20:42,884 [INFO] ==================================================
+2026-06-13 12:20:42,885 [INFO]  Total registros leídos:   9
+2026-06-13 12:20:42,887 [INFO]  Procesados con éxito:     1
+2026-06-13 12:20:42,888 [INFO]  Errores / Descartados:    8
+2026-06-13 12:20:42,890 [INFO] ==================================================
