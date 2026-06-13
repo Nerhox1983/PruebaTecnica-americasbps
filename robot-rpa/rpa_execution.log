@@ -1,0 +1,160 @@
+2026-06-13 08:29:24,367 [ERROR] Abortando: El archivo plano 'proveedores_rpa_prueba.csv' no existe en la ruta.
+2026-06-13 08:30:54,641 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:30:58,697 [CRITICAL] No se pudo conectar a la API. ¿El backend está corriendo? Detalles: HTTPSConnectionPool(host='localhost', port=53528): Max retries exceeded with url: /api/proveedores (Caused by NewConnectionError("HTTPSConnection(host='localhost', port=53528): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-06-13 08:30:58,699 [ERROR] Abortando ejecución por falta de conectividad con el servidor backend.
+2026-06-13 08:31:23,535 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:31:27,424 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:31:27,425 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:31:27,429 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:31:27,429 [WARNING] Fila 1 descartada: Datos incompletos ()
+2026-06-13 08:31:27,430 [WARNING] Fila 2 descartada: Datos incompletos ()
+2026-06-13 08:31:27,432 [WARNING] Fila 3 descartada: Datos incompletos ()
+2026-06-13 08:31:27,432 [WARNING] Fila 4 descartada: Datos incompletos ()
+2026-06-13 08:31:27,433 [INFO] ==================================================
+2026-06-13 08:31:27,433 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:31:27,434 [INFO] ==================================================
+2026-06-13 08:31:27,435 [INFO]  Total registros leídos:   4
+2026-06-13 08:31:27,435 [INFO]  Procesados con éxito:     0
+2026-06-13 08:31:27,436 [INFO]  Errores / Descartados:    4
+2026-06-13 08:31:27,437 [INFO] ==================================================
+2026-06-13 08:31:27,437 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:36:37,376 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:36:38,316 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:36:38,316 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:36:38,323 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:36:38,323 [WARNING] Fila 1 descartada: Datos incompletos ()
+2026-06-13 08:36:38,324 [WARNING] Fila 2 descartada: Datos incompletos ()
+2026-06-13 08:36:38,324 [WARNING] Fila 3 descartada: Datos incompletos ()
+2026-06-13 08:36:38,325 [WARNING] Fila 4 descartada: Datos incompletos ()
+2026-06-13 08:36:38,326 [INFO] ==================================================
+2026-06-13 08:36:38,326 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:36:38,331 [INFO] ==================================================
+2026-06-13 08:36:38,335 [INFO]  Total registros leídos:   4
+2026-06-13 08:36:38,336 [INFO]  Procesados con éxito:     0
+2026-06-13 08:36:38,337 [INFO]  Errores / Descartados:    4
+2026-06-13 08:36:38,338 [INFO] ==================================================
+2026-06-13 08:36:38,338 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:43:35,862 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:43:37,720 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:43:37,720 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:43:37,725 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:43:37,726 [WARNING] Fila 1 descartada: Datos incompletos ()
+2026-06-13 08:43:37,727 [WARNING] Fila 2 descartada: Datos incompletos ()
+2026-06-13 08:43:37,728 [WARNING] Fila 3 descartada: Datos incompletos ()
+2026-06-13 08:43:37,728 [WARNING] Fila 4 descartada: Datos incompletos ()
+2026-06-13 08:43:37,729 [INFO] ==================================================
+2026-06-13 08:43:37,729 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:43:37,747 [INFO] ==================================================
+2026-06-13 08:43:37,749 [INFO]  Total registros leídos:   4
+2026-06-13 08:43:37,753 [INFO]  Procesados con éxito:     0
+2026-06-13 08:43:37,754 [INFO]  Errores / Descartados:    4
+2026-06-13 08:43:37,755 [INFO] ==================================================
+2026-06-13 08:43:37,756 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:46:30,625 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:46:30,765 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:46:30,765 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:46:30,767 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:46:30,793 [ERROR] ❌ [Fila 1] Error API (405): 
+2026-06-13 08:46:30,996 [ERROR] ❌ [Fila 2] Error API (405): 
+2026-06-13 08:46:31,200 [ERROR] ❌ [Fila 3] Error API (405): 
+2026-06-13 08:46:31,405 [ERROR] ❌ [Fila 4] Error API (405): 
+2026-06-13 08:46:31,606 [INFO] ==================================================
+2026-06-13 08:46:31,607 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:46:31,607 [INFO] ==================================================
+2026-06-13 08:46:31,607 [INFO]  Total registros leídos:   4
+2026-06-13 08:46:31,607 [INFO]  Procesados con éxito:     0
+2026-06-13 08:46:31,608 [INFO]  Errores / Descartados:    4
+2026-06-13 08:46:31,608 [INFO] ==================================================
+2026-06-13 08:46:31,608 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:48:46,912 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:48:47,884 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:48:47,885 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:48:47,888 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:48:47,891 [ERROR] ❌ [Fila 1] Error API (405): 
+2026-06-13 08:48:48,095 [ERROR] ❌ [Fila 2] Error API (405): 
+2026-06-13 08:48:48,300 [ERROR] ❌ [Fila 3] Error API (405): 
+2026-06-13 08:48:48,504 [ERROR] ❌ [Fila 4] Error API (405): 
+2026-06-13 08:48:48,705 [INFO] ==================================================
+2026-06-13 08:48:48,705 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:48:48,705 [INFO] ==================================================
+2026-06-13 08:48:48,706 [INFO]  Total registros leídos:   4
+2026-06-13 08:48:48,706 [INFO]  Procesados con éxito:     0
+2026-06-13 08:48:48,706 [INFO]  Errores / Descartados:    4
+2026-06-13 08:48:48,706 [INFO] ==================================================
+2026-06-13 08:48:48,707 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:50:27,766 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:50:27,898 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:50:27,899 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:50:27,902 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:50:27,907 [ERROR] ❌ [Fila 1] Error API (405): 
+2026-06-13 08:50:28,112 [ERROR] ❌ [Fila 2] Error API (405): 
+2026-06-13 08:50:28,317 [ERROR] ❌ [Fila 3] Error API (405): 
+2026-06-13 08:50:28,522 [ERROR] ❌ [Fila 4] Error API (405): 
+2026-06-13 08:50:28,723 [INFO] ==================================================
+2026-06-13 08:50:28,724 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:50:28,724 [INFO] ==================================================
+2026-06-13 08:50:28,724 [INFO]  Total registros leídos:   4
+2026-06-13 08:50:28,725 [INFO]  Procesados con éxito:     0
+2026-06-13 08:50:28,725 [INFO]  Errores / Descartados:    4
+2026-06-13 08:50:28,725 [INFO] ==================================================
+2026-06-13 08:50:28,725 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:56:56,507 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:56:58,457 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:56:58,457 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:56:58,461 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:56:58,468 [ERROR] ❌ [Fila 1] Error API (405): 
+2026-06-13 08:56:58,672 [ERROR] ❌ [Fila 2] Error API (405): 
+2026-06-13 08:56:58,876 [ERROR] ❌ [Fila 3] Error API (405): 
+2026-06-13 08:56:59,080 [ERROR] ❌ [Fila 4] Error API (405): 
+2026-06-13 08:56:59,280 [INFO] ==================================================
+2026-06-13 08:56:59,281 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:56:59,281 [INFO] ==================================================
+2026-06-13 08:56:59,282 [INFO]  Total registros leídos:   4
+2026-06-13 08:56:59,282 [INFO]  Procesados con éxito:     0
+2026-06-13 08:56:59,282 [INFO]  Errores / Descartados:    4
+2026-06-13 08:56:59,283 [INFO] ==================================================
+2026-06-13 08:56:59,283 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:57:38,405 [INFO] Iniciando fase de reconocimiento: Verificando conexión con la API...
+2026-06-13 08:57:38,539 [INFO] Conexión con la API establecida con éxito (Estatus 200).
+2026-06-13 08:57:38,653 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:57:38,655 [INFO] Procesando filas e ingiriendo datos en el sistema...
+2026-06-13 08:57:38,658 [ERROR] ❌ [Fila 1] Error API (405): 
+2026-06-13 08:57:38,861 [ERROR] ❌ [Fila 2] Error API (405): 
+2026-06-13 08:57:39,064 [ERROR] ❌ [Fila 3] Error API (405): 
+2026-06-13 08:57:39,267 [ERROR] ❌ [Fila 4] Error API (405): 
+2026-06-13 08:57:39,468 [INFO] ==================================================
+2026-06-13 08:57:39,469 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:57:39,469 [INFO] ==================================================
+2026-06-13 08:57:39,470 [INFO]  Total registros leídos:   4
+2026-06-13 08:57:39,470 [INFO]  Procesados con éxito:     0
+2026-06-13 08:57:39,471 [INFO]  Errores / Descartados:    4
+2026-06-13 08:57:39,471 [INFO] ==================================================
+2026-06-13 08:57:39,471 [INFO] Proceso de automatización finalizado. Log guardado.
+2026-06-13 08:59:06,527 [INFO] Analizando mapeo de rutas en el servidor backend...
+2026-06-13 08:59:06,647 [INFO] Abriendo archivo de insumo: proveedores_rpa_prueba.csv
+2026-06-13 08:59:06,649 [INFO] Procesando filas de datos...
+2026-06-13 08:59:06,651 [ERROR] ❌ [Fila 1] Error Servidor (405): 
+2026-06-13 08:59:06,755 [ERROR] ❌ [Fila 2] Error Servidor (405): 
+2026-06-13 08:59:06,858 [ERROR] ❌ [Fila 3] Error Servidor (405): 
+2026-06-13 08:59:06,963 [ERROR] ❌ [Fila 4] Error Servidor (405): 
+2026-06-13 08:59:07,064 [INFO] ==================================================
+2026-06-13 08:59:07,064 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 08:59:07,065 [INFO] ==================================================
+2026-06-13 08:59:07,065 [INFO]  Total registros leídos:   4
+2026-06-13 08:59:07,065 [INFO]  Procesados con éxito:     0
+2026-06-13 08:59:07,065 [INFO]  Errores / Descartados:    4
+2026-06-13 08:59:07,065 [INFO] ==================================================
+2026-06-13 09:03:58,433 [INFO] Verificando conectividad con el backend de .NET...
+2026-06-13 09:04:00,198 [INFO] Conexión base establecida con éxito (Estatus 200).
+2026-06-13 09:04:00,198 [INFO] Procesando archivo: proveedores_rpa_prueba.csv
+2026-06-13 09:04:00,936 [ERROR] ❌ [Fila 1] Error en Servidor (405): Method Not Allowed en todos los endpoints probados.
+2026-06-13 09:04:01,495 [INFO] ✔ [Fila 2] Insertado correctamente: Distribuidora de Empaques Global
+2026-06-13 09:04:01,767 [INFO] ✔ [Fila 3] Insertado correctamente: Logística y Transportes del Pacífico
+2026-06-13 09:04:02,032 [INFO] ✔ [Fila 4] Insertado correctamente: Carnes y embutidos picantes Gauchito
+2026-06-13 09:04:02,133 [INFO] ==================================================
+2026-06-13 09:04:02,133 [INFO]         RESUMEN DE EJECUCIÓN DEL ROBOT RPA        
+2026-06-13 09:04:02,134 [INFO] ==================================================
+2026-06-13 09:04:02,134 [INFO]  Total registros leídos:   4
+2026-06-13 09:04:02,134 [INFO]  Procesados con éxito:     3
+2026-06-13 09:04:02,134 [INFO]  Errores / Descartados:    1
+2026-06-13 09:04:02,135 [INFO] ==================================================
