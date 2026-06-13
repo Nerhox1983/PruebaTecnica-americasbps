@@ -213,3 +213,16 @@
 2026-06-13 12:20:42,887 [INFO]  Procesados con éxito:     1
 2026-06-13 12:20:42,888 [INFO]  Errores / Descartados:    8
 2026-06-13 12:20:42,890 [INFO] ==================================================
+2026-06-13 12:48:19,349 [INFO] Verificando conectividad con el backend...
+2026-06-13 12:48:20,413 [INFO] Conexión base establecida con éxito.
+2026-06-13 12:48:20,414 [INFO] Procesando archivo: proveedores_rpa_prueba.csv
+2026-06-13 12:48:20,676 [INFO] [Fila 1] Insertado correctamente: Ceramicas Negra S.A.S.
+2026-06-13 12:48:20,948 [INFO] [Fila 2] Insertado correctamente: Empaques de carton
+2026-06-13 12:48:21,215 [INFO] [Fila 3] Insertado correctamente: Tecladin accesorios y hardware
+2026-06-13 12:48:21,315 [INFO] ==================================================
+2026-06-13 12:48:21,316 [INFO]               RESUMEN DE EJECUCIÓN                
+2026-06-13 12:48:21,322 [INFO] ==================================================
+2026-06-13 12:48:21,323 [INFO]  Total registros leídos:   3
+2026-06-13 12:48:21,324 [INFO]  Procesados con éxito:     3
+2026-06-13 12:48:21,324 [INFO]  Errores / Descartados:    0
+2026-06-13 12:48:21,326 [INFO] ==================================================

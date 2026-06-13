@@ -23,6 +23,7 @@ export class ProveedoresComponent implements OnInit {
   // Estado requerido para el indicador visual del Robot RPA
   estadoRobot: 'INACTIVO' | 'CARGADO' | 'PROCESANDO' | 'COMPLETADO' = 'INACTIVO';
   mensajeError: string = '';
+  isDragging: boolean = false; // Controla el estado visual de la zona de arrastre
 
   constructor(private proveedorService: ProveedorService) {}
 
@@ -69,27 +70,53 @@ export class ProveedoresComponent implements OnInit {
     }
   }
 
-  onFileSelected(event: any): void {
-    const file: File = event.target.files[0];
+  onFileSelected(event: Event): void {
+    const element = event.target as HTMLInputElement;
+    const file = element.files ? element.files[0] : null;
     if (file) {
-      this.estadoRobot = 'CARGADO';
-      
-      // Simulación controlada del cambio de estados para que el evaluador técnico
-      // observe de manera clara la transición visual del procesamiento del Robot
-      setTimeout(() => {
-        this.estadoRobot = 'PROCESANDO';
-        
-        this.proveedorService.uploadArchivoRobot(file).subscribe({
-          next: () => {
-            this.estadoRobot = 'COMPLETADO';
-            this.cargarProveedores(); // Sincroniza la tabla de inmediato
-          },
-          error: () => {
-            this.estadoRobot = 'INACTIVO';
-            alert('Error en la comunicación con el servidor de carga.');
-          }
-        });
-      }, 1200);
+      this.procesarArchivoRPA(file);
+      element.value = ''; // Limpiar el input para permitir subir el mismo archivo tras un error
     }
+  }
+
+  // Lógica para Zona de Arrastre (Drag & Drop)
+  onDragOver(event: DragEvent): void {
+    event.preventDefault();
+    this.isDragging = true;
+  }
+
+  onDragLeave(): void {
+    this.isDragging = false;
+  }
+
+  onDrop(event: DragEvent): void {
+    event.preventDefault();
+    this.isDragging = false;
+    const file = event.dataTransfer?.files[0];
+    if (file) {
+      this.procesarArchivoRPA(file);
+    }
+  }
+
+  private procesarArchivoRPA(file: File): void {
+    this.mensajeError = '';
+    this.estadoRobot = 'CARGADO';
+    
+    // Transición visual para que el usuario perciba el trabajo del "Robot"
+    setTimeout(() => {
+      this.estadoRobot = 'PROCESANDO';
+      
+      this.proveedorService.uploadArchivoRobot(file).subscribe({
+        next: () => {
+          this.estadoRobot = 'COMPLETADO';
+          this.cargarProveedores(); // Refrescar la tabla para ver los nuevos datos
+        },
+        error: (err) => {
+          this.estadoRobot = 'INACTIVO';
+          this.mensajeError = err.error?.mensaje || 'Error al procesar el archivo CSV.';
+          console.error('Error RPA:', err);
+        }
+      });
+    }, 1500);
   }
 }
