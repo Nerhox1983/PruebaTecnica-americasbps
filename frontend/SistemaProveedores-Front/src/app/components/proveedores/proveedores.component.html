@@ -1,0 +1,132 @@
+<div class="container py-4">
+  <h2 class="mb-4 text-center text-primary fw-bold">Panel de Control de Proveedores</h2>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100 border-0">
+        <div class="card-header bg-success text-white fw-bold">📋 Módulo de Carga Manual</div>
+        <div class="card-body border border-top-0 rounded-bottom">
+          <div *ngIf="mensajeError" class="alert alert-danger p-2 small">{{ mensajeError }}</div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">NIT / ID Fiscal</label>
+            <input type="text" class="form-control" [(ngModel)]="nuevoProveedor.nitEmpresa" placeholder="Ej: 900123456-1">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Nombre de la Empresa</label>
+            <input type="text" class="form-control" [(ngModel)]="nuevoProveedor.nombreEmpresa" placeholder="Ej: Distribuciones ABC">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">País</label>
+            <input type="text" class="form-control" [(ngModel)]="nuevoProveedor.pais" placeholder="Ej: Colombia">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Estado inicial</label>
+            <select class="form-select" [(ngModel)]="nuevoProveedor.estadoRegistro">
+              <option value="ACTIVO">ACTIVO</option>
+              <option value="INACTIVO">INACTIVO</option>
+            </select>
+          </div>
+          <button class="btn btn-success w-100 fw-bold shadow-sm" (click)="guardarManual()">Registrar Proveedor</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 d-flex flex-column gap-4">
+      <div class="card shadow-sm w-100 border-0">
+        <div class="card-header bg-primary text-white fw-bold">🤖 Módulo de Carga Automática (RPA)</div>
+        <div class="card-body border border-top-0 rounded-bottom text-center">
+          <p class="text-muted small">Cargue el archivo CSV o de texto plano para simular el procesamiento masivo desacoplado.</p>
+          <input type="file" class="form-control mb-3" (change)="onFileSelected($event)" accept=".txt,.csv">
+          
+          <div class="mt-2">
+            <span class="badge p-2.5 w-100 fs-6 shadow-sm" [ngClass]="{
+              'bg-secondary': estadoRobot === 'INACTIVO',
+              'bg-warning text-dark': estadoRobot === 'CARGADO',
+              'bg-info text-dark animate-pulse': estadoRobot === 'PROCESANDO',
+              'bg-success': estadoRobot === 'COMPLETADO'
+            }">
+              📌 Estado del Archivo: 
+              <span *ngIf="estadoRobot === 'INACTIVO'">Esperando selección...</span>
+              <span *ngIf="estadoRobot === 'CARGADO'">Archivo Cargado en el Servidor</span>
+              <span *ngIf="estadoRobot === 'PROCESANDO'">⚙️ Procesando por el Robot...</span>
+              <span *ngIf="estadoRobot === 'COMPLETADO'">✅ Completado Exitosamente</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm w-100 border-0" *ngIf="proveedorSeleccionado">
+        <div class="card-header bg-warning text-dark fw-bold">✏️ Módulo de Edición (NIT: {{proveedorSeleccionado.nitEmpresa}})</div>
+        <div class="card-body border border-top-0 rounded-bottom bg-light-subtle">
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Nombre de la Empresa (Editable)</label>
+            <input type="text" class="form-control" [(ngModel)]="proveedorSeleccionado.nombreEmpresa">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Estado de Registro (Editable)</label>
+            <select class="form-select" [(ngModel)]="proveedorSeleccionado.estadoRegistro">
+              <option value="ACTIVO">ACTIVO</option>
+              <option value="INACTIVO">INACTIVO</option>
+            </select>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-primary btn-sm flex-grow-1 fw-bold" (click)="guardarEdicion()">Actualizar Datos</button>
+            <button class="btn btn-outline-secondary btn-sm" (click)="proveedorSeleccionado = null">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card shadow-sm border-0">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center fw-bold">
+          <span>📊 Tabla de Visualización General (Tiempo Real)</span>
+          <button class="btn btn-outline-light btn-sm fw-semibold" (click)="cargarProveedores()">🔄 Forzar Refresco</button>
+        </div>
+        <div class="table-responsive border rounded-bottom" style="max-height: 380px;">
+          <table class="table table-hover table-striped mb-0 align-middle">
+            <thead class="table-light sticky-top">
+              <tr>
+                <th style="width: 8%">ID</th>
+                <th>NIT / ID Fiscal</th>
+                <th>Nombre Empresa</th>
+                <th>País</th>
+                <th>Tipo de Carga</th>
+                <th>Estado</th>
+                <th class="text-center" style="width: 12%">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let prov of proveedores">
+                <td><strong>{{ prov.id }}</strong></td>
+                <td>{{ prov.nitEmpresa }}</td>
+                <td>{{ prov.nombreEmpresa }}</td>
+                <td>{{ prov.pais }}</td>
+                <td>
+                  <span class="badge px-2 py-1.5 rounded border" [ngClass]="prov.tipoCarga === 'MANUAL' ? 'border-success text-success bg-success-subtle' : 'border-primary text-primary bg-primary-subtle'">
+                    {{ prov.tipoCarga }}
+                  </span>
+                </td>
+                <td>
+                  <span class="badge px-2 py-1.5" [ngClass]="prov.estadoRegistro === 'ACTIVO' ? 'bg-success' : 'bg-danger'">
+                    {{ prov.estadoRegistro }}
+                  </span>
+                </td>
+                <td class="text-center">
+                  <button class="btn btn-warning btn-sm fw-semibold shadow-sm" (click)="seleccionarParaEditar(prov)">
+                    Editar
+                  </button>
+                </td>
+              </tr>
+              <tr *ngIf="proveedores.length === 0">
+                <td colspan="7" class="text-center text-muted py-4 fs-6">No se encontraron proveedores registrados.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
