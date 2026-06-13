@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using SistemaProveedores.API.Endpoints;
 using SistemaProveedores.API.Infrastructure;
+using SistemaProveedores.Domain.Interfaces;
+using SistemaProveedores.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,7 @@ var connectionString = builder.Configuration.GetConnectionString("PostgresConnec
 if (string.IsNullOrEmpty(connectionString)) throw new InvalidOperationException("Falta ConnectionString.");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddScoped<IProveedorRepository, ProveedorRepository>();
 
 var app = builder.Build();
 
